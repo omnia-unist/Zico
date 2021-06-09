@@ -1,0 +1,13 @@
+AdaptiveAlloc=1
+ActivateGlobalPool=1
+GlobalPoolReleaseAR=0
+GlobalPoolReleaseAll=1
+GpuReleaseAR=0
+GpuReleaseAll=0
+
+MaxKernel=2
+TightFit=1
+
+TurnOnCoordinator=1
+NumVirtualGPU=2
+CoordinatorPolicy=6

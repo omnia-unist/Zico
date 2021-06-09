@@ -1,0 +1,3 @@
+TensorRecording=1
+RecordOutputTensorOnly=1
+DeferredMegaBytesThreshold=64
