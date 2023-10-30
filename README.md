@@ -138,3 +138,50 @@ Learn more about the TensorFlow community at the [community page of tensorflow.o
 ## License
 
 [Apache License 2.0](LICENSE)
+
+
+# Exporting Environmental Variables for Zico
+
+Environmental variables are used to store configuration settings and information that can be accessed by various applications and scripts. 
+In this document, we will discuss how to export two specific environmental variables: `ZICO_CONFIGURATION_PATH` and `LOG_PATH`.
+
+## 1. Exporting `ZICO_CONFIGURATION_PATH`
+
+`ZICO_CONFIGURATION_PATH` is an environmental variable that specifies the path to a configuration file used by application. (Mandatory)
+
+To export this variable, you can use the following command in a Unix-like terminal:
+
+```bash
+export ZICO_CONFIGURATION_PATH=/path/to/your/configuration.txt
+```
+
+- Replace `/path/to/your/configuration.txt` with the actual file path where your configuration file is located.
+
+To make this change permanent, you can add the export command to your shell's startup files (e.g., `~/.bashrc`, `~/.bash_profile`, or `~/.zshrc`).
+
+## 2. Exporting `LOG_PATH`
+
+`LOG_PATH` is an environmental variable that specifies the path where application's logs will be stored. (Optional)
+
+To export this variable, you can use the following command in a Unix-like terminal:
+
+```bash
+export LOG_PATH=/path/to/your/log/directory/
+```
+
+- Replace `/path/to/your/log/directory/` with the actual directory where you want to store your application logs.
+
+As with `ZICO_CONFIGURATION_PATH`, you can also add the export command for `LOG_PATH` to your shell's startup files to make the change permanent.
+
+## Verifying Environmental Variable Values
+
+To verify that the environmental variables have been correctly exported, you can use the `echo` command. For example, to check the values of `ZICO_CONFIGURATION_PATH` and `LOG_PATH`, you can use:
+
+```bash
+echo $ZICO_CONFIGURATION_PATH
+echo $LOG_PATH
+```
+
+These commands should display the paths you specified when exporting the variables.
+
+Remember that the availability and behavior of environmental variables may vary depending on your operating system and shell. Ensure that you set and use these variables in a way that is compatible with your specific environment.
