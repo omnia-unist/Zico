@@ -69,7 +69,11 @@ void BFCStatus::PrintLifeTimeVector(int step_id) {
 void BFCStatus::BFCLogFileWrite() {
     std::ofstream fout;
     // std::string filename = "/home/gangmuk/mnt/ssd2/V100/tf_bfc_log_BFC" + std::to_string(id) + ".output";
-    std::string filename = "/home/gangmuk/mnt/ssd2/V100/tf_bfc_log.output";
+    // std::string filename = "/home/gangmuk/mnt/ssd2/V100/tf_bfc_log.output";
+    const char* log_file_path_ptr = std::getenv("LOG_PATH");
+    assert(log_file_path_ptr && "LOG_PATH must be exported");
+    std::string filename(log_file_path_ptr);
+
     fout.open(filename, std::ofstream::out | std::ofstream::app);
     for (auto it = bfclog_vec.begin(); it != bfclog_vec.end(); ++it) {
       // fout << std::get<0>(*it) << "," 
